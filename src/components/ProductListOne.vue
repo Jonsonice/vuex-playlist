@@ -2,7 +2,7 @@
   <div id="product-list-one">
     <h1>涨工资</h1>
     <ul>
-      <li v-for="product in products" :key="product.id">
+      <li v-for="product in saleProducts" :key="product.id">
         <span class="name">{{product.name}}</span>
         <span class="price">{{product.price}} RMB</span>
       </li>
@@ -20,9 +20,12 @@ export default {
       
   //   }
   // }
-  computed:{
+ computed:{
     products(){
       return this.$store.state.products;
+    },
+    saleProducts(){
+      return this.$store.getters.saleProducts;
     }
   }
 }
