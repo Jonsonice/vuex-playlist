@@ -28,4 +28,9 @@ body{
   font-family: Ubuntu;
   color: #555;
 }
+button {
+    border-style: none;
+    border: 1px solid #888;
+    margin: 0 20px;
+}
 </style>
