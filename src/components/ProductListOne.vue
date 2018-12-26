@@ -7,7 +7,7 @@
         <span class="price">{{product.price}} RMB</span>
       </li>
     </ul>
-    <button @click="addPrice1">加班</button>
+    <button @click="addPrice1(200)">加班(2s后显示)</button>
     <button @click="addPrice2">拔草</button>
     <button @click="addPrice3">修机器</button>
   </div>
@@ -24,8 +24,8 @@ export default {
         }
     },
     methods: {
-        addPrice1: function() {
-            this.$store.commit('addPrice1');
+        addPrice1: function(amount) {
+            this.$store.dispatch('addPrice1',amount);
         },
         addPrice2: function() {
             this.$store.commit('addPrice2');
