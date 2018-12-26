@@ -1,6 +1,6 @@
 <template>
   <div id="product-list-one">
-    <h1>product-list-one</h1>
+    <h1>涨工资</h1>
     <ul>
       <li v-for="product in products" :key="product.id">
         <span class="name">{{product.name}}</span>
@@ -13,10 +13,16 @@
 <script>
 
 export default {
-  props:["products"],
-  data(){
-    return {
+  //拿父组件的数据
+  // props:["products"],
+  // data(){
+  //   return {
       
+  //   }
+  // }
+  computed:{
+    products(){
+      return this.$store.state.products;
     }
   }
 }
